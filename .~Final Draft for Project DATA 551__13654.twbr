@@ -1,0 +1,3506 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0119.2058                               -->
+<workbook source-build='2019.4.2 (20194.20.0119.2058)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Duration Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Max&quot;'>
+        <calculation class='tableau' formula='&quot;Max&quot;' />
+        <members>
+          <member value='&quot;Max&quot;' />
+          <member value='&quot;Min&quot;' />
+          <member value='&quot;Avg&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='events (events2)' inline='true' name='federated.0qpa2p601izl101g9caqx0ynfkgk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='events2' name='excel-direct.1j582uw1tatyhh14farni194atv7'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/mds/Desktop/Data-551-Project/events.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1j582uw1tatyhh14farni194atv7' name='events' table='[events$]' type='table'>
+          <columns gridOrigin='A1:AG9019:no:A1:AG9019:0' header='yes' outcome='2'>
+            <column datatype='string' name='EVENTID' ordinal='0' />
+            <column datatype='integer' name='CITY_ID' ordinal='1' />
+            <column datatype='string' name='CITY' ordinal='2' />
+            <column datatype='string' name='COUNTRY' ordinal='3' />
+            <column datatype='string' name='ISO3' ordinal='4' />
+            <column datatype='integer' name='GWNO' ordinal='5' />
+            <column datatype='string' name='COUNTRY_HIST' ordinal='6' />
+            <column datatype='integer' name='GWNO_HIST' ordinal='7' />
+            <column datatype='string' name='REGION' ordinal='8' />
+            <column datatype='real' name='LONG' ordinal='9' />
+            <column datatype='real' name='LAT' ordinal='10' />
+            <column datatype='string' name='TYPE' ordinal='11' />
+            <column datatype='string' name='gTYPE' ordinal='12' />
+            <column datatype='integer' name='PTYPE' ordinal='13' />
+            <column datatype='integer' name='BDAY' ordinal='14' />
+            <column datatype='integer' name='BMONTH' ordinal='15' />
+            <column datatype='integer' name='BYEAR' ordinal='16' />
+            <column datatype='integer' name='EDAY' ordinal='17' />
+            <column datatype='integer' name='EMONTH' ordinal='18' />
+            <column datatype='integer' name='EYEAR' ordinal='19' />
+            <column datatype='string' name='ACTOR1' ordinal='20' />
+            <column datatype='string' name='ACTOR2' ordinal='21' />
+            <column datatype='string' name='ACTOR3' ordinal='22' />
+            <column datatype='string' name='TARGET1' ordinal='23' />
+            <column datatype='string' name='TARGET2' ordinal='24' />
+            <column datatype='string' name='PARTICIPANT' ordinal='25' />
+            <column datatype='integer' name='NPART' ordinal='26' />
+            <column datatype='string' name='NDEATH' ordinal='27' />
+            <column datatype='string' name='ELOCAL' ordinal='28' />
+            <column datatype='string' name='REPORTID1' ordinal='29' />
+            <column datatype='string' name='REPORTID2' ordinal='30' />
+            <column datatype='string' name='REPORTID3' ordinal='31' />
+            <column datatype='string' name='SUMMARY' ordinal='32' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>EVENTID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[EVENTID]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EVENTID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CITY_ID]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>CITY_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CITY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>CITY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[COUNTRY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>COUNTRY</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ISO3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ISO3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ISO3</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GWNO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GWNO]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>GWNO</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY_HIST</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[COUNTRY_HIST]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>COUNTRY_HIST</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GWNO_HIST</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GWNO_HIST]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>GWNO_HIST</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REGION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REGION]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REGION</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONG</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONG]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>LONG</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAT</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LAT]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>LAT</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TYPE</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gTYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gTYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>gTYPE</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PTYPE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PTYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>PTYPE</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BDAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BDAY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BDAY</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BMONTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BMONTH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BMONTH</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BYEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BYEAR]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BYEAR</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EDAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EDAY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EDAY</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EMONTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EMONTH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EMONTH</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EYEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EYEAR]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EYEAR</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR1</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR2</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR3</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TARGET1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TARGET1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TARGET1</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TARGET2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TARGET2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TARGET2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PARTICIPANT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PARTICIPANT]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>PARTICIPANT</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NPART</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NPART]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>NPART</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NDEATH</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[NDEATH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>NDEATH</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ELOCAL</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ELOCAL]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ELOCAL</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID1</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID2</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID3</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUMMARY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SUMMARY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>SUMMARY</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[events]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AG9019:no:A1:AG9019:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Actor1' datatype='string' name='[ACTOR1]' role='dimension' type='nominal' />
+      <column caption='Actor2' datatype='string' name='[ACTOR2]' role='dimension' type='nominal' />
+      <column caption='Actor3' datatype='string' name='[ACTOR3]' role='dimension' type='nominal' />
+      <column caption='Bday' datatype='integer' name='[BDAY]' role='measure' type='quantitative' />
+      <column caption='Bmonth' datatype='integer' name='[BMONTH]' role='measure' type='quantitative' />
+      <column caption='Byear' datatype='integer' name='[BYEAR]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='City' datatype='string' name='[CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City Id' datatype='integer' name='[CITY_ID]' role='dimension' type='ordinal' />
+      <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='None' caption='Country Hist' datatype='string' name='[COUNTRY_HIST]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Eday' datatype='integer' name='[EDAY]' role='measure' type='quantitative' />
+      <column caption='Elocal' datatype='string' name='[ELOCAL]' role='dimension' type='nominal' />
+      <column caption='Emonth' datatype='integer' name='[EMONTH]' role='measure' type='quantitative' />
+      <column caption='Eventid' datatype='string' name='[EVENTID]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Eyear' datatype='integer' name='[EYEAR]' role='dimension' type='ordinal' />
+      <column caption='Gwno' datatype='integer' name='[GWNO]' role='measure' type='quantitative' />
+      <column caption='Gwno Hist' datatype='integer' name='[GWNO_HIST]' role='measure' type='quantitative' />
+      <column caption='Iso3' datatype='string' name='[ISO3]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[LAT]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Long' datatype='real' name='[LONG]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Ndeath' datatype='string' name='[NDEATH]' role='dimension' type='nominal' />
+      <column caption='Npart' datatype='integer' name='[NPART]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Participant' datatype='string' name='[PARTICIPANT]' role='dimension' type='nominal' />
+      <column caption='Ptype' datatype='integer' name='[PTYPE]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[REGION]' role='dimension' type='nominal' />
+      <column caption='Reportid1' datatype='string' name='[REPORTID1]' role='dimension' type='nominal' />
+      <column caption='Reportid2' datatype='string' name='[REPORTID2]' role='dimension' type='nominal' />
+      <column caption='Reportid3' datatype='string' name='[REPORTID3]' role='dimension' type='nominal' />
+      <column caption='Summary' datatype='string' name='[SUMMARY]' role='dimension' type='nominal' />
+      <column caption='Target1' datatype='string' name='[TARGET1]' role='dimension' type='nominal' />
+      <column caption='Target2' datatype='string' name='[TARGET2]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+      <column-instance column='[TYPE]' derivation='None' name='[none:TYPE:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Country,Ndeath)' hidden='true' name='[Action (Country,Ndeath)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[COUNTRY]' />
+          <groupfilter function='level-members' level='[NDEATH]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Participant)' hidden='true' name='[Action (Participant)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[PARTICIPANT]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/mds/Desktop/Data-551-Project/events (events2).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>EVENTID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EVENTID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EVENTID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9018</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CITY_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[CITY_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CITY_ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CITY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CITY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CITY</remote-alias>
+              <ordinal>2</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COUNTRY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COUNTRY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COUNTRY</remote-alias>
+              <ordinal>3</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ISO3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ISO3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ISO3</remote-alias>
+              <ordinal>4</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GWNO</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GWNO]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GWNO</remote-alias>
+              <ordinal>5</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COUNTRY_HIST</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COUNTRY_HIST]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COUNTRY_HIST</remote-alias>
+              <ordinal>6</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GWNO_HIST</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GWNO_HIST]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GWNO_HIST</remote-alias>
+              <ordinal>7</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REGION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REGION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REGION</remote-alias>
+              <ordinal>8</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LONG</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LONG]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LONG</remote-alias>
+              <ordinal>9</ordinal>
+              <family>events</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAT</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LAT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAT</remote-alias>
+              <ordinal>10</ordinal>
+              <family>events</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TYPE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TYPE</remote-alias>
+              <ordinal>11</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gTYPE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gTYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gTYPE</remote-alias>
+              <ordinal>12</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PTYPE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PTYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PTYPE</remote-alias>
+              <ordinal>13</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BDAY</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BDAY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BDAY</remote-alias>
+              <ordinal>14</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BMONTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BMONTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BMONTH</remote-alias>
+              <ordinal>15</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BYEAR</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BYEAR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BYEAR</remote-alias>
+              <ordinal>16</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EDAY</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EDAY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EDAY</remote-alias>
+              <ordinal>17</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EMONTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EMONTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EMONTH</remote-alias>
+              <ordinal>18</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EYEAR</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EYEAR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EYEAR</remote-alias>
+              <ordinal>19</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR1</remote-alias>
+              <ordinal>20</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1510</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR2</remote-alias>
+              <ordinal>21</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>530</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR3</remote-alias>
+              <ordinal>22</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>176</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TARGET1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TARGET1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TARGET1</remote-alias>
+              <ordinal>23</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1589</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TARGET2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TARGET2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TARGET2</remote-alias>
+              <ordinal>24</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>355</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PARTICIPANT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PARTICIPANT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PARTICIPANT</remote-alias>
+              <ordinal>25</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NPART</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NPART]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NPART</remote-alias>
+              <ordinal>26</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NDEATH</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NDEATH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NDEATH</remote-alias>
+              <ordinal>27</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>264</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ELOCAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ELOCAL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ELOCAL</remote-alias>
+              <ordinal>28</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1767</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID1</remote-alias>
+              <ordinal>29</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9018</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID2</remote-alias>
+              <ordinal>30</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>872</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID3</remote-alias>
+              <ordinal>31</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>222</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SUMMARY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SUMMARY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SUMMARY</remote-alias>
+              <ordinal>32</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8667</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.596014' measure-ordering='alphabetic' measure-percentage='0.362319' parameter-percentage='0.0416667' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:TYPE:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Pro-Government Demonstration&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Anti-Government Terrorism&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;General Warfare&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Pro-Government Terrorism (Repression)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Inter-Communal Warfare&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Armed Attack&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Organized Demonstration&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Spontaneous Demonstration&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Organized Violent Riot&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Armed Battle/Clash&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Spontaneous Violent Riot&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Communal Terrorism&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='events (events)' inline='true' name='federated.1yfmnv61g3s78s13q2sqp1dxtk84' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='events' name='excel-direct.17kdezv0lka5sh11f430306vsqbr'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='/Users/mds/Desktop/Data-551-Project/events.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.17kdezv0lka5sh11f430306vsqbr' name='events' table='[events$]' type='table'>
+          <columns gridOrigin='A1:AG9019:no:A1:AG9019:1' lost='0' outcome='1' processed='130981'>
+            <column datatype='string' name='EVENTID' ordinal='0' />
+            <column datatype='integer' name='CITY_ID' ordinal='1' />
+            <column datatype='string' name='CITY' ordinal='2' />
+            <column datatype='string' name='COUNTRY' ordinal='3' />
+            <column datatype='string' name='ISO3' ordinal='4' />
+            <column datatype='integer' name='GWNO' ordinal='5' />
+            <column datatype='string' name='COUNTRY_HIST' ordinal='6' />
+            <column datatype='integer' name='GWNO_HIST' ordinal='7' />
+            <column datatype='string' name='REGION' ordinal='8' />
+            <column datatype='real' name='LONG' ordinal='9' />
+            <column datatype='real' name='LAT' ordinal='10' />
+            <column datatype='string' name='TYPE' ordinal='11' />
+            <column datatype='string' name='gTYPE' ordinal='12' />
+            <column datatype='integer' name='PTYPE' ordinal='13' />
+            <column datatype='integer' name='BDAY' ordinal='14' />
+            <column datatype='integer' name='BMONTH' ordinal='15' />
+            <column datatype='integer' name='BYEAR' ordinal='16' />
+            <column datatype='integer' name='EDAY' ordinal='17' />
+            <column datatype='integer' name='EMONTH' ordinal='18' />
+            <column datatype='integer' name='EYEAR' ordinal='19' />
+            <column datatype='string' name='ACTOR1' ordinal='20' />
+            <column datatype='string' name='ACTOR2' ordinal='21' />
+            <column datatype='string' name='ACTOR3' ordinal='22' />
+            <column datatype='string' name='TARGET1' ordinal='23' />
+            <column datatype='string' name='TARGET2' ordinal='24' />
+            <column datatype='string' name='PARTICIPANT' ordinal='25' />
+            <column datatype='integer' name='NPART' ordinal='26' />
+            <column datatype='string' name='NDEATH' ordinal='27' />
+            <column datatype='string' name='ELOCAL' ordinal='28' />
+            <column datatype='string' name='REPORTID1' ordinal='29' />
+            <column datatype='string' name='REPORTID2' ordinal='30' />
+            <column datatype='string' name='REPORTID3' ordinal='31' />
+            <column datatype='string' name='SUMMARY' ordinal='32' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>EVENTID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[EVENTID]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EVENTID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CITY_ID]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>CITY_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CITY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>CITY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[COUNTRY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>COUNTRY</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ISO3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ISO3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ISO3</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GWNO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GWNO]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>GWNO</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY_HIST</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[COUNTRY_HIST]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>COUNTRY_HIST</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GWNO_HIST</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GWNO_HIST]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>GWNO_HIST</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REGION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REGION]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REGION</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONG</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONG]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>LONG</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAT</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LAT]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>LAT</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TYPE</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gTYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gTYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>gTYPE</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PTYPE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PTYPE]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>PTYPE</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BDAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BDAY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BDAY</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BMONTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BMONTH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BMONTH</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BYEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BYEAR]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>BYEAR</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EDAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EDAY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EDAY</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EMONTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EMONTH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EMONTH</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EYEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EYEAR]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>EYEAR</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR1</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR2</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTOR3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ACTOR3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ACTOR3</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TARGET1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TARGET1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TARGET1</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TARGET2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TARGET2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>TARGET2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PARTICIPANT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PARTICIPANT]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>PARTICIPANT</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NPART</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NPART]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>NPART</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NDEATH</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[NDEATH]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>NDEATH</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ELOCAL</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ELOCAL]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>ELOCAL</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID1]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID1</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID2]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID2</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTID3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[REPORTID3]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>REPORTID3</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUMMARY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SUMMARY]</local-name>
+            <parent-name>[events]</parent-name>
+            <remote-alias>SUMMARY</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[events]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AG9019:no:A1:AG9019:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>130981</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[BDAY]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[BMONTH]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[BYEAR]' role='dimension' type='ordinal' />
+      <column aggregation='None' datatype='string' name='[CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' name='[CITY_ID]' role='dimension' type='ordinal' />
+      <column aggregation='None' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='None' datatype='string' name='[COUNTRY_HIST]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Duration' datatype='real' name='[Calculation_3314930824308744192]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10; WHEN &quot;Avg&quot; THEN AVG([Calculation_871024338706436099])&#10; WHEN &quot;Max&quot; THEN MAX([Calculation_871024338706436099])&#10; WHEN &quot;Min&quot; THEN MIN([Calculation_871024338706436099])&#10;END' />
+      </column>
+      <column caption='begindate' datatype='date' name='[Calculation_871024338701598721]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='MAKEDATE([BYEAR],[BMONTH],[BDAY])' />
+      </column>
+      <column caption='enddate' datatype='date' name='[Calculation_871024338703851522]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE([EYEAR],[EMONTH],[EDAY])' />
+      </column>
+      <column caption='eventdur' datatype='integer' name='[Calculation_871024338706436099]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[Calculation_871024338701598721],[Calculation_871024338703851522])' />
+      </column>
+      <column aggregation='Avg' datatype='real' name='[LAT]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[LONG]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='gtype' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/mds/Desktop/Data-551-Project/events (events).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>EVENTID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EVENTID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EVENTID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9018</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CITY_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[CITY_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CITY_ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CITY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CITY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CITY</remote-alias>
+              <ordinal>2</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COUNTRY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COUNTRY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COUNTRY</remote-alias>
+              <ordinal>3</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ISO3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ISO3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ISO3</remote-alias>
+              <ordinal>4</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GWNO</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GWNO]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GWNO</remote-alias>
+              <ordinal>5</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COUNTRY_HIST</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COUNTRY_HIST]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COUNTRY_HIST</remote-alias>
+              <ordinal>6</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GWNO_HIST</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GWNO_HIST]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GWNO_HIST</remote-alias>
+              <ordinal>7</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REGION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REGION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REGION</remote-alias>
+              <ordinal>8</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LONG</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LONG]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LONG</remote-alias>
+              <ordinal>9</ordinal>
+              <family>events</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAT</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LAT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAT</remote-alias>
+              <ordinal>10</ordinal>
+              <family>events</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TYPE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TYPE</remote-alias>
+              <ordinal>11</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gTYPE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gTYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gTYPE</remote-alias>
+              <ordinal>12</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PTYPE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PTYPE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PTYPE</remote-alias>
+              <ordinal>13</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BDAY</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BDAY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BDAY</remote-alias>
+              <ordinal>14</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BMONTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BMONTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BMONTH</remote-alias>
+              <ordinal>15</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BYEAR</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BYEAR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BYEAR</remote-alias>
+              <ordinal>16</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EDAY</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EDAY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EDAY</remote-alias>
+              <ordinal>17</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EMONTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EMONTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EMONTH</remote-alias>
+              <ordinal>18</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EYEAR</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EYEAR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EYEAR</remote-alias>
+              <ordinal>19</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR1</remote-alias>
+              <ordinal>20</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1510</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR2</remote-alias>
+              <ordinal>21</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>530</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ACTOR3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ACTOR3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ACTOR3</remote-alias>
+              <ordinal>22</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>176</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TARGET1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TARGET1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TARGET1</remote-alias>
+              <ordinal>23</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1589</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TARGET2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TARGET2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TARGET2</remote-alias>
+              <ordinal>24</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>355</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PARTICIPANT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PARTICIPANT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PARTICIPANT</remote-alias>
+              <ordinal>25</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NPART</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NPART]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NPART</remote-alias>
+              <ordinal>26</ordinal>
+              <family>events</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NDEATH</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NDEATH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NDEATH</remote-alias>
+              <ordinal>27</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>264</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ELOCAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ELOCAL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ELOCAL</remote-alias>
+              <ordinal>28</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1767</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID1</remote-alias>
+              <ordinal>29</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9018</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID2</remote-alias>
+              <ordinal>30</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>872</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTID3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REPORTID3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTID3</remote-alias>
+              <ordinal>31</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>222</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SUMMARY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SUMMARY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SUMMARY</remote-alias>
+              <ordinal>32</ordinal>
+              <family>events</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8667</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RCA_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.387681' measure-ordering='alphabetic' measure-percentage='0.570652' parameter-percentage='0.0416667' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Duration Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Max&quot;'>
+          <calculation class='tableau' formula='&quot;Max&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter1' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard B' type='sheet' worksheet='No.of deaths' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard B' />
+      </command>
+    </action>
+    <action caption='Filter2' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard B' type='sheet' worksheet='No. of participants' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard B' />
+      </command>
+    </action>
+    <action caption='Filter3' name='[Action3]'>
+      <activation type='on-select' />
+      <source dashboard='Dashboard B' type='sheet' worksheet='Top 10 event type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard B' />
+      </command>
+    </action>
+    <action caption='Filter4' name='[Action4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard B' type='sheet' worksheet='actors' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard B' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard B' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Type' />
+        <param name='target' value='Dashboard B' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Dur_type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>Duration by Event Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events)' name='federated.1yfmnv61g3s78s13q2sqp1dxtk84' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Duration Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Max&quot;'>
+              <calculation class='tableau' formula='&quot;Max&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1yfmnv61g3s78s13q2sqp1dxtk84'>
+            <column aggregation='Sum' datatype='integer' name='[BDAY]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[BMONTH]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[BYEAR]' role='dimension' type='ordinal' />
+            <column caption='Duration' datatype='real' name='[Calculation_3314930824308744192]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10; WHEN &quot;Avg&quot; THEN AVG([Calculation_871024338706436099])&#10; WHEN &quot;Max&quot; THEN MAX([Calculation_871024338706436099])&#10; WHEN &quot;Min&quot; THEN MIN([Calculation_871024338706436099])&#10;END' />
+            </column>
+            <column caption='begindate' datatype='date' name='[Calculation_871024338701598721]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='MAKEDATE([BYEAR],[BMONTH],[BDAY])' />
+            </column>
+            <column caption='enddate' datatype='date' name='[Calculation_871024338703851522]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([EYEAR],[EMONTH],[EDAY])' />
+            </column>
+            <column caption='eventdur' datatype='integer' name='[Calculation_871024338706436099]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[Calculation_871024338701598721],[Calculation_871024338703851522])' />
+            </column>
+            <column datatype='integer' name='[EDAY]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[EMONTH]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[EYEAR]' role='measure' type='quantitative' />
+            <column datatype='string' name='[REGION]' role='dimension' type='nominal' />
+            <column caption='gtype' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_871024338703851522]' derivation='Day' name='[dy:Calculation_871024338703851522:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[REGION]' derivation='None' name='[none:REGION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TYPE]' derivation='None' name='[none:TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3314930824308744192]' derivation='User' name='[usr:Calculation_3314930824308744192:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_871024338701598721]' derivation='Year' name='[yr:Calculation_871024338701598721:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[dy:Calculation_871024338703851522:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='1' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='2' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='3' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='4' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='5' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='6' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='7' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='8' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='9' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='10' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='11' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='12' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='13' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='14' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='15' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='16' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='17' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='18' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='19' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='20' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='21' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='22' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='23' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='24' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='25' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='26' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='27' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='28' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='29' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='30' />
+              <groupfilter function='member' level='[dy:Calculation_871024338703851522:ok]' member='31' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:ok]'>
+            <groupfilter from='1960' function='range' level='[yr:Calculation_871024338701598721:ok]' to='2014' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:ok]</column>
+            <column>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[dy:Calculation_871024338703851522:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[usr:Calculation_3314930824308744192:qk]' scope='rows' value='true' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[usr:Calculation_3314930824308744192:qk]' scope='rows' value='Duration (months)' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.55972373485565186' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk] * [federated.1yfmnv61g3s78s13q2sqp1dxtk84].[usr:Calculation_3314930824308744192:qk])</rows>
+        <cols>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:TYPE:nk]</cols>
+      </table>
+      <simple-id uuid='{65820415-D2EE-4859-B4E5-72A02496D4D9}' />
+    </worksheet>
+    <worksheet name='Freq_reg'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>Frequency and Total Number of Events </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events)' name='federated.1yfmnv61g3s78s13q2sqp1dxtk84' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yfmnv61g3s78s13q2sqp1dxtk84'>
+            <column aggregation='Sum' datatype='integer' name='[BYEAR]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[REGION]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[cum:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[BYEAR]' derivation='None' name='[none:BYEAR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REGION]' derivation='None' name='[none:REGION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]' scope='rows' value='Frequency' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]' scope='rows' value='Running Total' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:BYEAR:qk]' scope='cols' value='Year' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='218' />
+                <format attr='maxheight' value='218' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk] + [federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk])</rows>
+        <cols>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:BYEAR:qk]</cols>
+      </table>
+      <simple-id uuid='{13DF8C73-624D-4761-BF14-48022C05D96B}' />
+    </worksheet>
+    <worksheet name='Freq_reg_type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>Frequency and Total by Event Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events)' name='federated.1yfmnv61g3s78s13q2sqp1dxtk84' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yfmnv61g3s78s13q2sqp1dxtk84'>
+            <column aggregation='Sum' datatype='integer' name='[BDAY]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[BMONTH]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[BYEAR]' role='dimension' type='ordinal' />
+            <column caption='begindate' datatype='date' name='[Calculation_871024338701598721]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='MAKEDATE([BYEAR],[BMONTH],[BDAY])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[REGION]' role='dimension' type='nominal' />
+            <column caption='gtype' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[cum:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[REGION]' derivation='None' name='[none:REGION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TYPE]' derivation='None' name='[none:TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_871024338701598721]' derivation='Year' name='[yr:Calculation_871024338701598721:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_871024338701598721]' derivation='Year' name='[yr:Calculation_871024338701598721:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:ok]'>
+            <groupfilter from='1960' function='range' level='[yr:Calculation_871024338701598721:ok]' to='2014' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:ok]' value='33' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:qk]' scope='cols' value='Year' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]' scope='rows' value='Running Total' />
+            <format attr='title' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]' scope='rows' value='Frequency' />
+            <format attr='width' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]' value='84' />
+            <format attr='width' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]' value='84' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:TYPE:nk]' value='100' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1100' />
+                <format attr='maxwidth' value='1100' />
+                <format attr='minheight' value='125' />
+                <format attr='maxheight' value='125' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:TYPE:nk] * ([federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk] + [federated.1yfmnv61g3s78s13q2sqp1dxtk84].[cum:sum:Number of Records:qk]))</rows>
+        <cols>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[yr:Calculation_871024338701598721:qk]</cols>
+      </table>
+      <simple-id uuid='{6CEF640B-F27E-416A-BE83-7CAE43D78E2B}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Regions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events)' name='federated.1yfmnv61g3s78s13q2sqp1dxtk84' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1yfmnv61g3s78s13q2sqp1dxtk84'>
+            <column aggregation='None' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[REGION]' role='dimension' type='nominal' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[REGION]' derivation='None' name='[none:REGION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[Longitude (generated)]' field-type='quantitative' max='22250921.40037645' min='-28681724.934027448' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[Latitude (generated)]' field-type='quantitative' max='28696869.276644636' min='-15828121.590344867' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' value='Regions'>
+              <formatted-text>
+                <run fontname='Tableau Book' fontsize='14'>Regions</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' />
+              <lod column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:COUNTRY:nk]' />
+              <lod column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[sum:Number of Records:qk]' />
+              <geometry column='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[Latitude (generated)]</rows>
+        <cols>[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{F85B7026-7057-412F-8E18-B2CB93A0EA3B}' />
+    </worksheet>
+    <worksheet name='No. of participants'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of participants per event</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events2)' name='federated.0qpa2p601izl101g9caqx0ynfkgk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qpa2p601izl101g9caqx0ynfkgk'>
+            <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Ndeath' datatype='string' name='[NDEATH]' role='dimension' type='nominal' />
+            <column caption='Participant' datatype='string' name='[PARTICIPANT]' role='dimension' type='nominal' />
+            <column-instance column='[PARTICIPANT]' derivation='Count' name='[cnt:PARTICIPANT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PARTICIPANT]' derivation='None' name='[none:PARTICIPANT:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[COUNTRY]' />
+              <groupfilter function='level-members' level='[NDEATH]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:COUNTRY:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qpa2p601izl101g9caqx0ynfkgk].[cnt:PARTICIPANT:qk]</rows>
+        <cols>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:PARTICIPANT:nk]</cols>
+      </table>
+      <simple-id uuid='{D978C688-ED77-4F99-9C6B-79C409783046}' />
+    </worksheet>
+    <worksheet name='No.of deaths'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of deaths per events</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events2)' name='federated.0qpa2p601izl101g9caqx0ynfkgk' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0qpa2p601izl101g9caqx0ynfkgk'>
+            <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column aggregation='Sum' caption='Eyear' datatype='integer' name='[EYEAR]' role='dimension' type='ordinal' />
+            <column caption='Ndeath' datatype='string' name='[NDEATH]' role='dimension' type='nominal' />
+            <column caption='Participant' datatype='string' name='[PARTICIPANT]' role='dimension' type='nominal' />
+            <column caption='Ptype' datatype='integer' name='[PTYPE]' role='measure' type='quantitative' />
+            <column caption='Type' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[TYPE]' derivation='Attribute' name='[attr:TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EYEAR]' derivation='None' name='[none:EYEAR:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[NDEATH]' derivation='None' name='[none:NDEATH:nk]' pivot='key' type='nominal' />
+            <column-instance aggregation-param='95' column='[PTYPE]' derivation='Percentile' name='[prc95:PTYPE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]'>
+            <groupfilter function='member' level='[PARTICIPANT]' member='&quot;Unknown, but over 100000&quot;' user:ui-action-filter='[Action2]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:COUNTRY:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:EYEAR:ok]'>
+            <groupfilter from='1960' function='range' level='[none:EYEAR:ok]' to='2014' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:EYEAR:ok]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[prc95:PTYPE:qk]' />
+              <tooltip column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[attr:TYPE:nk]' />
+              <text column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:NDEATH:nk]' />
+              <lod column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' />
+              <geometry column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Latitude (generated)]</rows>
+        <cols>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{CFCEC4AF-D329-4619-B4C4-F4B6631CAD73}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{27956891-E041-442D-B776-6CA5FE16A037}' />
+    </worksheet>
+    <worksheet name='Top 10 event type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 event types</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events2)' name='federated.0qpa2p601izl101g9caqx0ynfkgk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qpa2p601izl101g9caqx0ynfkgk'>
+            <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column aggregation='Sum' caption='Eyear' datatype='integer' name='[EYEAR]' role='dimension' type='ordinal' />
+            <column caption='Ndeath' datatype='string' name='[NDEATH]' role='dimension' type='nominal' />
+            <column caption='Participant' datatype='string' name='[PARTICIPANT]' role='dimension' type='nominal' />
+            <column caption='Type' datatype='string' name='[TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[TYPE]' derivation='Count' name='[cnt:TYPE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EYEAR]' derivation='None' name='[none:EYEAR:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[TYPE]' derivation='None' name='[none:TYPE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[COUNTRY]' />
+              <groupfilter function='level-members' level='[NDEATH]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]'>
+            <groupfilter function='member' level='[PARTICIPANT]' member='&quot;Unknown, but over 100000&quot;' user:ui-action-filter='[Action2]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:COUNTRY:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:TYPE:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([TYPE])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:TYPE:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:TYPE:nk]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:TYPE:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0qpa2p601izl101g9caqx0ynfkgk].[cnt:TYPE:qk]</rows>
+        <cols>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:EYEAR:ok]</cols>
+      </table>
+      <simple-id uuid='{7D559A42-C3AF-428B-8296-53D832DEBCD3}' />
+    </worksheet>
+    <worksheet name='actors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most popular group involved in an event&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events (events2)' name='federated.0qpa2p601izl101g9caqx0ynfkgk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qpa2p601izl101g9caqx0ynfkgk'>
+            <column caption='Actor1' datatype='string' name='[ACTOR1]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Ndeath' datatype='string' name='[NDEATH]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Participant' datatype='string' name='[PARTICIPANT]' role='dimension' type='nominal' />
+            <column-instance column='[ACTOR1]' derivation='None' name='[none:ACTOR1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[COUNTRY]' />
+              <groupfilter function='level-members' level='[NDEATH]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]'>
+            <groupfilter function='member' level='[PARTICIPANT]' member='&quot;Unknown, but over 100000&quot;' user:ui-action-filter='[Action2]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:COUNTRY:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Country,Ndeath)]</column>
+            <column>[federated.0qpa2p601izl101g9caqx0ynfkgk].[Action (Participant)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0qpa2p601izl101g9caqx0ynfkgk].[sum:Number of Records:qk]' num-steps='4' palette='red_green_gold_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[sum:Number of Records:qk]' />
+              <size column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[sum:Number of Records:qk]' />
+              <text column='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:ACTOR1:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4AAA14F1-BC89-47D3-B0B3-7CF09BA35166}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard A'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Urban Disorder Events by Region, 1960 to 2014</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Duration Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Max&quot;'>
+          <calculation class='tableau' formula='&quot;Max&quot;' />
+          <members>
+            <member value='&quot;Max&quot;' />
+            <member value='&quot;Min&quot;' />
+            <member value='&quot;Avg&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='47' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='49' type='layout-basic' w='98828' x='586' y='1042'>
+              <zone h='6771' id='20' param='vert' type='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='40' h='6250' id='21' is-fixed='true' type='title' w='98828' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='91145' id='50' param='vert' type='layout-flow' w='98828' x='586' y='7813'>
+                <zone h='91145' id='18' param='vert' type='layout-flow' w='98828' x='586' y='7813'>
+                  <zone h='91145' id='7' param='horz' type='layout-flow' w='98828' x='586' y='7813'>
+                    <zone h='91145' id='5' type='layout-basic' w='33528' x='586' y='7813'>
+                      <zone h='33304' id='3' name='Map' show-title='false' w='33528' x='586' y='14092'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='51562' id='9' name='Freq_reg' w='33528' x='586' y='47396'>
+                        <layout-cache has-max-size-h='true' has-max-size-w='true' maxheight='563' maxwidth='1168' minheight='563' minwidth='1168' type-h='scalable' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='6279' id='8' name='Map' pane-specification-id='0' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' show-title='false' type='color' w='33528' x='586' y='7813'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='892' h='91145' id='6' is-fixed='true' param='horz' type='layout-flow' w='65300' x='34114' y='7813'>
+                      <zone fixed-size='420' h='91145' id='10' is-fixed='true' name='Freq_reg_type' w='31333' x='34114' y='7813'>
+                        <layout-cache has-max-size-h='true' has-max-size-w='true' maxheight='3118' maxwidth='1286' minheight='3118' minwidth='1286' type-h='scalable' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='91145' id='45' name='Dur_type' w='33961' x='65447' y='7813'>
+                        <layout-cache cell-count-w='12' minheight='624' non-cell-size-w='140' type-h='scalable' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='45' h='5729' id='48' is-fixed='true' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='9863' x='70703' y='87240' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>Urban Disorder Events by Region, 1960 to 2014</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='62' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='61' param='vert' type='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='40' h='6250' id='21' type='title' w='98828' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='91145' id='10' is-fixed='true' name='Freq_reg_type' w='31333' x='34114' y='7813'>
+                  <layout-cache has-max-size-h='true' has-max-size-w='true' maxheight='1368' maxwidth='1286' minheight='1368' minwidth='1286' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='91145' id='45' is-fixed='true' name='Dur_type' w='33964' x='65447' y='7813'>
+                  <layout-cache cell-count-w='5' minheight='503' non-cell-size-w='140' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='248' h='33304' id='3' is-fixed='true' name='Map' show-title='false' w='33528' x='586' y='14092'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6279' id='8' name='Map' pane-specification-id='0' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' show-title='false' type='color' w='33528' x='586' y='7813'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51562' id='9' is-fixed='true' name='Freq_reg' w='33528' x='586' y='47396'>
+                  <layout-cache has-max-size-h='true' has-max-size-w='true' maxheight='563' maxwidth='1168' minheight='563' minwidth='1168' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='45' h='5729' id='48' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='9863' x='70703' y='87240'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{20BEBB3A-7D97-42B0-A2AB-C80751C2824D}' />
+    </dashboard>
+    <dashboard name='Dashboard B'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='events (events2)' name='federated.0qpa2p601izl101g9caqx0ynfkgk' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0qpa2p601izl101g9caqx0ynfkgk'>
+        <column aggregation='None' caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column aggregation='Sum' caption='Eyear' datatype='integer' name='[EYEAR]' role='dimension' type='ordinal' />
+        <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+        <column-instance column='[EYEAR]' derivation='None' name='[none:EYEAR:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='5' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='3' type='layout-basic' w='87115' x='586' y='1042'>
+              <zone h='48958' id='1' name='No.of deaths' w='43558' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48958' id='12' name='Top 10 event type' w='43557' x='44144' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48958' id='14' name='No. of participants' w='57247' x='586' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48958' id='15' name='actors' w='29868' x='57833' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='4' is-fixed='true' param='vert' type='layout-flow' w='11713' x='87701' y='1042'>
+              <zone h='6771' id='6' mode='dropdown' name='No.of deaths' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' type='filter' w='11713' x='87701' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6771' id='7' mode='checkdropdown' name='No.of deaths' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:EYEAR:ok]' type='filter' w='11713' x='87701' y='7813'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8464' id='8' name='No.of deaths' pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[prc95:PTYPE:qk]' type='color' w='11713' x='87701' y='14584'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19011' id='13' name='Top 10 event type' pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:TYPE:nk]' type='color' w='11713' x='87701' y='23048'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8464' id='16' name='actors' pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[sum:Number of Records:qk]' type='color' w='11713' x='87701' y='42059'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{DCD05EF3-6E67-4AFE-809E-9224AF364688}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='48'>
+    <window class='worksheet' name='No.of deaths'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:COUNTRY:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:EYEAR:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[prc95:PTYPE:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D6C35CB6-A97C-482E-A563-81EFCA2B033A}' />
+    </window>
+    <window class='worksheet' name='No. of participants'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2FF87419-E206-4DA6-9516-8978F0FE13D0}' />
+    </window>
+    <window class='worksheet' name='actors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7D76C6E3-FEB2-4601-84AD-1CB0186917AE}' />
+    </window>
+    <window class='worksheet' name='Top 10 event type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qpa2p601izl101g9caqx0ynfkgk].[none:TYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EDF3A413-0EDB-49D2-B5E0-D97347A35526}' />
+    </window>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DF6D5043-EBA0-4612-B7D4-6F04415CACCE}' />
+    </window>
+    <window class='worksheet' name='Freq_reg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{39B7846E-6449-4115-8438-7A3504D3A8B9}' />
+    </window>
+    <window class='worksheet' name='Freq_reg_type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5962BFB6-15FC-47E4-B62D-595E875C6C24}' />
+    </window>
+    <window class='worksheet' name='Dur_type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='6' param='[federated.1yfmnv61g3s78s13q2sqp1dxtk84].[none:REGION:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A2999861-E6A2-41F4-921F-AA222C1645D6}' />
+    </window>
+    <window class='dashboard' name='Dashboard A'>
+      <viewpoints>
+        <viewpoint name='Dur_type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Freq_reg'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Freq_reg_type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{543CEEC3-6760-4F95-B424-D93BA392B5FB}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard B'>
+      <viewpoints>
+        <viewpoint name='No. of participants'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='No.of deaths'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 event type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='actors' />
+      </viewpoints>
+      <active id='1' />
+      <simple-id uuid='{72D02484-6A8C-41E0-9975-2A9CBDC91792}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DDE7193C-8771-4676-BA7B-6CFA30661308}' />
+    </window>
+  </windows>
+</workbook>
